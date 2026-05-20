@@ -39,9 +39,9 @@ function createCanvas(width) {
 
 const button = document.querySelector("button");
 button.addEventListener("click", function(){
-    let strWidth = prompt("Enter number of squares per side. Ex: 100", "16");
+    let strWidth = prompt("Enter number of squares per side. Max 100.", "16");
     let canvasWidth = Number(strWidth);
-    if (canvasWidth) {
+    if (canvasWidth && canvasWidth <= 100) {
         deleteCanvas();
         createCanvas(canvasWidth);
     }
