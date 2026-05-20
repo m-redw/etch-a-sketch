@@ -1,3 +1,7 @@
+button {
+    margin-bottom: 32px;
+}
+
 .container {
     height: 256px;
     width: 256px;
