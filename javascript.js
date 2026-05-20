@@ -5,9 +5,17 @@ function createSquare() {
     square.classList.add("square");
     square.style.width = "16px";
     square.style.height = "16px";
+    square.style.opacity = "0";
 
     square.addEventListener("mouseenter", function() {
-        square.style.backgroundColor = "black";
+        const randR = Math.random() * 255 + 1;
+        const randG = Math.random() * 255 + 1;
+        const randB = Math.random() * 255 + 1;
+        const randColor = `rgb(${randR},${randG},${randB})`;
+        square.style.backgroundColor = randColor;
+
+        const newOpacity = Number(square.style.opacity) + 0.1;
+        square.style.opacity = `${newOpacity}`;
     });
 
     container.appendChild(square);
